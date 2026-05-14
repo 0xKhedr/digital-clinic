@@ -1,30 +1,30 @@
-import { Geist, Geist_Mono, Manrope } from "next/font/google"
+import { Geist, Geist_Mono, Manrope } from "next/font/google";
 
-import "@workspace/ui/globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+import "@workspace/ui/globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@workspace/ui/lib/utils";
 
-const manrope = Manrope({subsets:['latin'],variable:'--font-sans'})
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 
 const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+    subsets: ["latin"],
+    variable: "--font-mono",
+});
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode
+    children: React.ReactNode;
 }>) {
-  return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", manrope.variable)}
-    >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  )
+    return (
+        <html
+            lang="en"
+            suppressHydrationWarning
+            className={cn("antialiased", fontMono.variable, "font-sans", manrope.variable)}
+        >
+            <body>
+                <ThemeProvider>{children}</ThemeProvider>
+            </body>
+        </html>
+    );
 }
