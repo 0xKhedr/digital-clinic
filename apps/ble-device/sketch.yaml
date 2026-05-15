@@ -1,0 +1,11 @@
+default_profile: xiao_nrf52840_sense
+
+profiles:
+  xiao_nrf52840_sense:
+    fqbn: Seeeduino:mbed:xiaonRF52840Sense
+    platforms:
+      - platform: Seeeduino:mbed
+        platform_index_url: https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
+    libraries:
+      - ArduinoBLE
+      - Seeed Arduino LSM6DS3 (2.0.4)
